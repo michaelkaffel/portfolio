@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.shimmer-tag {
+    background: #052e16;
+    transition: filter 2s ease-in-out;
+}
+
+
