@@ -16,29 +16,6 @@ const Projects = () => {
         return () => clearInterval(interval);
     }, [stack.length]);
 
-    // const [activeIndex, setActiveIndex] = useState(0);
-    // const [visible, setVisible] = useState(true);
-
-    // useEffect(() => {
-
-    //     setVisible(true);
-
-    //     const fadeOut = setTimeout(() => {
-    //         setVisible(false);
-    //     }, 1000);
-
-    //     const next = setTimeout(() => {
-    //         setActiveIndex(prev => (prev +1) % stack.length);
-    //     }, 2000);
-
-    //     return () => {
-    //         clearTimeout(fadeOut);
-    //         clearTimeout(next);
-    //     }
-    // }, [activeIndex, stack.length]);
-
-
-
     return (
         <div className='bg-[#0d1a0e] min-h-screen text-slate-200'>
             <div className='max-w-5xl mx-auto px-6 py-20'>
