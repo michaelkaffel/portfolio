@@ -17,6 +17,7 @@ export default {
         'moss-text': {
           primary: 'var(--moss-text-primary)',
           secondary: 'var(--moss-text-secondary)',
+          tertiary: 'var(--moss-text-tertiary)',
           muted: 'var(--moss-text-muted)',
         },
         'moss-green': {

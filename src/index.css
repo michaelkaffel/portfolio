@@ -13,6 +13,7 @@
   /* Text */
   --moss-text-primary: #c8d5bb;   /* headings, primary content */
   --moss-text-secondary: #7a8572; /* body, descriptions */
+  --moss-text-tertiary: #c2c7be;
   --moss-text-muted: #5a6454;     /* placeholders, disabled */
 
   /* Accents */
