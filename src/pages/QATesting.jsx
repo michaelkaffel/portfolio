@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import e2eDemo from '../assets/videos/e2e-test-demo.mp4'
 
 const tools = [
     'Playwright', 'Manual Testing', 'Bug Reporting',
@@ -41,6 +42,21 @@ const QATesting = () => {
                                 of Where Was That. Written in Playwright with a shared browser
                                 context across hooks for realistic session simulation.
                             </p>
+                        </div>
+
+                        {/* Video Demo */}
+                        <div>
+                            <h3 className='text-green-400 font-semibold text-sm uppercase tracking-widest font-mono mb-4'>
+                                Test Suite in Action
+                            </h3>
+                            <video 
+                                src={e2eDemo}
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                className='w-full rounded-xl border border-green-900'
+                            />
                         </div>
 
                         {/* Coverage */}
