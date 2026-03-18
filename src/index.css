@@ -1,9 +1,38 @@
+
+:root {
+  /* Backgrounds — darkest to lightest */
+  --moss-bg-deep: #141a14;      /* page background */
+  --moss-bg-base: #1a1f1a;      /* main sections */
+  --moss-bg-surface: #232a23;   /* cards, nav, footer */
+  --moss-bg-elevated: #2a3228;  /* hover states, active cards */
+
+  /* Borders */
+  --moss-border: #3a4a3a;
+  --moss-border-subtle: #2e3a2e;
+
+  /* Text */
+  --moss-text-primary: #c8d5bb;   /* headings, primary content */
+  --moss-text-secondary: #7a8572; /* body, descriptions */
+  --moss-text-muted: #5a6454;     /* placeholders, disabled */
+
+  /* Accents */
+  --moss-green: #7ca982;          /* primary accent — links, tags, icons */
+  --moss-green-bright: #96c49c;   /* hover state for green */
+  --moss-amber: #d4a04a;          /* highlight spark — CTAs, active states */
+  --moss-amber-bright: #e0b565;   /* hover state for amber */
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {
+    background-color: var(--moss-bg-deep);
+    color: var(--moss-text-secondary);
+}
+
 .shimmer-tag {
-    background: #052e16;
+    background: var(--moss-bg-elevated);
     transition: filter 2s ease-in-out;
 }
 

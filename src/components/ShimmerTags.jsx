@@ -29,7 +29,7 @@ const ShimmerTags = ({ items, className, wrapperClassName, subtle }) => {
                     <span
                         key={item}
                         style={{ filter: `brightness(${brightness})` }}
-                        className={className || 'shimmer-tag text-green-300 text-xs font-mono px-3 py-1 rounded-full border border-green-800'}
+                        className={className || 'shimmer-tag text-moss-green text-xs font-mono px-3 py-1 rounded-full border border-moss-border'}
                     >
                         {item}
                     </span>

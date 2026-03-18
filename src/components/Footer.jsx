@@ -3,9 +3,9 @@ import { MdEmail } from 'react-icons/md'
 
 const Footer = () => {
     return (
-        <footer className='bg-[#0d1a0e] border-t border-green-900 px-6 py-8'>
+        <footer className='bg-moss-surface border-t border-moss-border-subtle px-6 py-8'>
             <div className='max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4'>
-                <p className='text-slate-500 text-sm font-mono'>
+                <p className='text-moss-text-muted text-sm font-mono'>
                     © {new Date().getFullYear()} Michael Kaffel
                 </p>
 
@@ -14,7 +14,7 @@ const Footer = () => {
                         href='https://github.com/michaelkaffel'
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='text-slate-400 hover:text-green-400 transition-colors duration-200'
+                        className='text-moss-text-secondary hover:text-moss-green transition-colors duration-200'
                         aria-label='GitHub'
                     >
                         <FaGithub size={20} />
@@ -23,14 +23,14 @@ const Footer = () => {
                         href='https://www.linkedin.com/in/michael-kaffel-0797173a2/'
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='text-slate-400 hover:text-green-400 transition-colors duration-200'
+                        className='text-moss-text-secondary hover:text-moss-green transition-colors duration-200'
                         aria-label='LinkedIn'
                     >
                         <FaLinkedin size={20} />
                     </a>
                     <a
                         href='mailto:michaeldkaffel@gmail.com'
-                        className='text-slate-400 hover:text-green-400 transition-colors duration-200'
+                        className='text-moss-text-secondary hover:text-moss-green transition-colors duration-200'
                         aria-label='Email'
                     >
                         <MdEmail size={22} />

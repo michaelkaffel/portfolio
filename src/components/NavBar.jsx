@@ -1,10 +1,6 @@
 import { useState, useEffect, useRef  } from 'react';
 import { NavLink } from 'react-router-dom';
 
-
-
-
-
 const links = [
     { to: '/', label: 'Home'},
     { to: '/about', label: 'About'},
@@ -15,8 +11,8 @@ const links = [
 
 const navLinkClass = ({ isActive }) => 
     isActive
-        ? 'text-green-400 font-semibold'
-        : 'text-slate-300 hover:text-green-300 transition-colors duration-200'
+        ? 'text-moss-green font-semibold'
+        : 'text-moss-text-secondary hover:text-moss-green-bright transition-colors duration-200'
 
 const NavBar = () => {
 
@@ -34,9 +30,9 @@ const NavBar = () => {
 }, []);
 
     return (
-        <nav ref={menuRef} className='sticky top-0 z-50 bg-[#0d1a0e]/90 backdrop-blur-sm border-b border-green-900 px-6 py-4'>
+        <nav ref={menuRef} className='sticky top-0 z-50 bg-moss-surface/90 backdrop-blur-sm border-b border-moss-border-subtle px-6 py-4'>
             <div className='max-w-5xl mx-auto flex items-center justify-between'>
-                <NavLink to='/' className='text-green-400 font-bold text-lg tracking-wide'>
+                <NavLink to='/' className='text-moss-green font-bold text-lg tracking-wide'>
                     Michael Kaffel
                 </NavLink>
 
@@ -53,7 +49,7 @@ const NavBar = () => {
 
                     {/* Hamburger button - mobile only */}
                 <button
-                    className='md:hidden text-slate-300 hover:text-green-400 transition-colors'
+                    className='md:hidden text-moss-text-primary hover:text-moss-green transition-colors'
                     onClick={() => setMenuOpen(prev => !prev)}
                     aria-label='Toggle menu'
                 >

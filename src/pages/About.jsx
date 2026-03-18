@@ -1,4 +1,5 @@
-import headshot from '../assets/images/aboutme-headshot.jpg'
+import headshot from '../assets/images/aboutme-headshot.jpg';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const skills = {
     'QA & Testing': [
@@ -16,8 +17,11 @@ const skills = {
 };
 
 const About = () => {
+
+    useDocumentTitle('About');
+    
     return (
-        <div className='bg-[#0d1a0e] min-h-screen text-slate-200'>
+        <div className='min-h-screen'>
             <div className='max-w-5xl mx-auto px-6 py-20'>
 
                 {/* Photo + Intro */}
@@ -28,8 +32,8 @@ const About = () => {
                             className='w-48 h-60 rounded-xl object-cover flex-shrink-0'
                         />
                     <div className='flex flex-col gap-4'>
-                        <h1 className='text-4xl font-bold text-white'>About Me</h1>
-                        <p className='text-slate-300 text-lg leading-relaxed'>
+                        <h1 className='text-4xl font-bold text-moss-text-primary'>About Me</h1>
+                        <p className='text-moss-text-primary text-lg leading-relaxed'>
                             I'm a full-stack developer and QA engineer with over six years of
                             real-world testing experience. At Nutritious Movement, I was part of
                             the web team responsible for QA — running pre- and post-release test
@@ -37,7 +41,7 @@ const About = () => {
                             browsers, and verifying regression fixes on a production site with a
                             global audience.
                         </p>
-                        <p className='text-slate-400 leading-relaxed'>
+                        <p className='text-moss-text-secondary leading-relaxed'>
                             A bootcamp accelerated my path into full-stack development, but
                             quality has always been central to how I work. I now combine
                             hands-on development with the testing discipline I built in a
@@ -48,8 +52,8 @@ const About = () => {
 
                 {/* My Story */}
                 <section className='mb-20'>
-                    <h2 className='text-2xl font-bold text-green-400 mb-6'>My Journey</h2>
-                    <div className='flex flex-col gap-4 text-slate-300 leading-relaxed max-w-2xl'>
+                    <h2 className='text-2xl font-bold text-moss-green mb-6'>My Journey</h2>
+                    <div className='flex flex-col gap-4 text-moss-text-primary leading-relaxed max-w-2xl'>
                         <p>
                             My path into tech runs through an earlier career that had more in
                             common with software development than it might appear. Before joining
@@ -89,17 +93,17 @@ const About = () => {
 
                 {/* Skills Grid */}
                 <section>
-                    <h2 className='text-2xl font-bold text-green-400 mb-8'>Skills</h2>
+                    <h2 className='text-2xl font-bold text-moss-green mb-8'>Skills</h2>
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                         {Object.entries(skills).map(([category, items]) => (
-                            <div key={category} className='bg-[#0a140b] border border-green-900 rounded-xl p-6'>
-                                <h3 className='text-green-400 font-semibold font-mono text-sm uppercase tracking-widest mb-4'>
+                            <div key={category} className='bg-moss-surface border border-moss-border rounded-xl p-6'>
+                                <h3 className='text-moss-green font-semibold font-mono text-sm uppercase tracking-widest mb-4'>
                                     {category}
                                 </h3>
                                 <ul className='flex flex-col gap-2'>
                                     {items.map((skill) => (
-                                        <li key={skill} className='text-slate-300 text-sm flex items-center gap-2'>
-                                            <span className='text-green-600'>▸</span>
+                                        <li key={skill} className='text-moss-text-primary text-sm flex items-center gap-2'>
+                                            <span className='text-moss-green'>▸</span>
                                             {skill}
                                         </li>
                                     ))}
