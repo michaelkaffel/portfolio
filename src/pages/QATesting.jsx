@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import ShimmerTags from '../components/ShimmerTags';
 import e2eDemo from '../assets/videos/e2e-test-demo.mp4'
 
 const tools = [
@@ -7,15 +7,6 @@ const tools = [
 ];
 
 const QATesting = () => {
-
-    const [activeIndex, setActiveIndex] = useState(0)
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setActiveIndex(prev => (prev + 1) % tools.length);
-        }, 2000);
-        return () => clearInterval(interval);
-    }, [])
 
     return (
         <div className='bg-[#0d1a0e] min-h-screen text-slate-200'>
@@ -49,7 +40,7 @@ const QATesting = () => {
                             <h3 className='text-green-400 font-semibold text-sm uppercase tracking-widest font-mono mb-4'>
                                 Test Suite in Action
                             </h3>
-                            <video 
+                            <video
                                 src={e2eDemo}
                                 autoPlay
                                 muted
@@ -151,24 +142,7 @@ const QATesting = () => {
                         Tools & Methodologies
                     </p>
                     <div className='flex flex-wrap gap-3'>
-                        {tools.map((tool, i) => {
-                            const distance = Math.abs(i - activeIndex);
-                            const brightness = distance === 0 ? 1.2
-                                : distance === 1 ? 1.05
-                                    : distance === 2 ? 0.85
-                                        : distance === 3 ? 0.65
-                                            : 0.5;
-
-                            return (
-                                <span
-                                    key={tool}
-                                    style={{ filter: `brightness(${brightness})` }}
-                                    className="shimmer-tag text-green-300 text-xs font-mono px-3 py-1 rounded-full border border-green-800"
-                                >
-                                    {tool}
-                                </span>
-                            );
-                        })}
+                        <ShimmerTags items={tools} />
                     </div>
                 </section>
             </div>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ShimmerTags from '../components/ShimmerTags';
 
 const skills = [
     'React', 'Node.js', 'Express', 'MongoDB', 'JavaScript', 'Playwright', 'Git', 'Tailwind CSS', 'REST APIs', 'HTML & CSS']
@@ -42,16 +43,12 @@ const Home = () => {
 
             {/* Skills Strip */}
             <section className='border-t border-b border-green-900 bg-[#0a140b] py-4 overflow-hidden'>
-                <div className='flex gap-10 px-6 flex-wrap justify-center'>
-                    {skills.map((skill) => (
-                        <span
-                            key={skill}
-                            className='text-slate-400 text-sm font-mono tracking-wide whitespace-nowrap'
-                        >
-                            {skill}
-                        </span>
-                    ))}
-                </div>
+                <ShimmerTags 
+                    items={skills}
+                    wrapperClassName='flex gap-10 px-6 flex-wrap justify-center'
+                    className='shimmer-tag text-slate-400 text-sm font-mono tracking-wide whitespace-nowrap px-3 py-1 rounded-full border border-green-900'
+                    subtle
+                />
             </section>
         </div>
     );

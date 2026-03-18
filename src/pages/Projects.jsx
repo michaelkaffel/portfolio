@@ -1,20 +1,11 @@
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ShimmerTags from '../components/ShimmerTags';
 import wwtScreenshot from '../assets/images/wwt-screenshot.jpg'
 
 
 const stack = ['React', 'Node.js', 'Express', 'MongoDB', 'Playwright', 'Google Cloud']
 
 const Projects = () => {
-
-    const [activeIndex, setActiveIndex] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setActiveIndex(prev => (prev + 1) % stack.length);
-        }, 2000);
-        return () => clearInterval(interval);
-    }, [stack.length]);
 
     return (
         <div className='bg-[#0d1a0e] min-h-screen text-slate-200'>
@@ -68,26 +59,7 @@ const Projects = () => {
                             </div>
 
                             {/* Stack tags */}
-                            <div className='flex flex-wrap gap-2'>
-                                {stack.map((tech, i) => {
-                                    const distance = Math.abs(i - activeIndex);
-                                    const brightness = distance === 0 ? 1.2
-                                        : distance === 1 ? 1.05
-                                            : distance === 2 ? 0.85
-                                                : distance === 3 ? 0.65
-                                                    : 0.5;
-
-                                    return (
-                                        <span
-                                            key={tech}
-                                            style={{ filter: `brightness(${brightness})` }}
-                                            className="shimmer-tag text-green-300 text-xs font-mono px-3 py-1 rounded-full border border-green-800"
-                                        >
-                                            {tech}
-                                        </span>
-                                    );
-                                })}
-                            </div>
+                            <ShimmerTags items={stack} />
 
                             {/* Buttons */}
                             <div className='flex flex-wrap gap-4 pt-2'>
