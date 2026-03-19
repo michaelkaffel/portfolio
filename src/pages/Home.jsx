@@ -18,7 +18,7 @@ const Home = () => {
                 style={{ backgroundImage: `url(${heroBg})` }}
             >
                 {/* Dark overlay — adjust opacity to taste */}
-                <div className='absolute inset-0 bg-moss-deep/80' />
+                <div className='absolute inset-0 bg-moss-deep/90' />
 
                 <div className='relative max-w-5xl mx-auto px-6 py-28 flex flex-col items-start gap-6'>
                     <p className='text-moss-amber font-mono text-sm tracking-widest uppercase'>

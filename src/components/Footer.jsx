@@ -1,13 +1,18 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md'
+import Logo from '../assets/images/mk-logo.5780042f-secondary.svg'
 
 const Footer = () => {
     return (
         <footer className='bg-moss-surface border-t border-moss-border-subtle px-6 py-8'>
             <div className='max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4'>
-                <p className='text-moss-text-muted text-sm font-mono'>
-                    © {new Date().getFullYear()} Michael Kaffel
-                </p>
+                <div className='flex items-center gap-2'>
+                    <img src={Logo} alt="MK logo" className="h-7 w-7"/>
+                    <p className='text-moss-text-muted text-sm font-mono'>
+                        © {new Date().getFullYear()} Michael Kaffel
+                    </p>
+                </div>
+
 
                 <div className='flex items-center gap-6'>
                     <a

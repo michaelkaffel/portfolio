@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef  } from 'react';
 import { NavLink } from 'react-router-dom';
+import Logo from '../assets/images/mk-logo-transparent-moss.svg';
+
 
 const links = [
     { to: '/', label: 'Home'},
@@ -32,8 +34,9 @@ const NavBar = () => {
     return (
         <nav ref={menuRef} className='sticky top-0 z-50 bg-moss-surface/90 backdrop-blur-sm border-b border-moss-border-subtle px-6 py-4'>
             <div className='max-w-5xl mx-auto flex items-center justify-between'>
-                <NavLink to='/' className='text-moss-green font-bold text-lg tracking-wide'>
-                    Michael Kaffel
+                <NavLink to='/' className='flex items-center gap-2'>
+                    <img src={Logo} alt="MK logo" className="h-8 w-8"/>
+                    <span className='text-moss-green font-bold text-lg tracking-wide'>Michael Kaffel</span>
                 </NavLink>
 
                 {/* Desktop links */}
