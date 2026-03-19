@@ -12,7 +12,7 @@ const Projects = () => {
     return (
         <div className='min-h-screen'>
             <div className='max-w-5xl mx-auto px-6 py-20'>
-                <h1 className='text-4xl font-bold text-moss-text-primary'>Projects</h1>
+                <h1 className='text-4xl font-bold text-moss-text-primary mb-4'>Projects</h1>
                 <p className='text-moss-text-secondary mb-16 max-w-xl'>
                     A look at what I've built — from full-stack applications to the test
                     suites that back them up.

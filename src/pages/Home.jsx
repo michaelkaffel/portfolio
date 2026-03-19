@@ -1,20 +1,36 @@
 import { Link } from 'react-router-dom';
-import ShimmerTags from '../components/ShimmerTags';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 import heroBg from '../assets/images/hero-bg.jpg';
+import {
+    SiReact, SiNodedotjs, SiExpress, SiMongodb,
+    SiJavascript, SiGit, SiTailwindcss,
+    SiHtml5,
+} from 'react-icons/si'
+import { VscBeaker } from 'react-icons/vsc';
+import { FaCss3Alt } from 'react-icons/fa';
 
 const skills = [
-    'React', 'Node.js', 'Express', 'MongoDB', 'JavaScript', 'Playwright', 'Git', 'Tailwind CSS', 'REST APIs', 'HTML & CSS']
+    { label: 'React', icon: SiReact },
+    { label: 'Node.js', icon: SiNodedotjs },
+    { label: 'Express', icon: SiExpress },
+    { label: 'MongoDB', icon: SiMongodb },
+    { label: 'JavaScript', icon: SiJavascript },
+    { label: 'Playwright', icon: VscBeaker },
+    { label: 'Git', icon: SiGit },
+    { label: 'Tailwind CSS', icon: SiTailwindcss },
+    { label: 'HTML', icon: SiHtml5 },
+    { label: 'CSS', icon: FaCss3Alt },
+];
 
 const Home = () => {
     useDocumentTitle('Home');
 
     return (
-        <div className='min-h-screen'>
+        <div >
 
             {/* Hero */}
-            <section
-                className='relative bg-cover bg-center'
+            <div
+                className='relative bg-cover bg-center pb-20'
                 style={{ backgroundImage: `url(${heroBg})` }}
             >
                 {/* Dark overlay — adjust opacity to taste */}
@@ -51,17 +67,20 @@ const Home = () => {
                         </a>
                     </div>
                 </div>
-            </section>
 
-            {/* Skills Strip */}
-            <section className='border-t border-b border-moss-border-subtle bg-moss-surface py-4 overflow-hidden'>
-                <ShimmerTags
-                    items={skills}
-                    wrapperClassName='flex gap-10 px-6 flex-wrap justify-center'
-                    className='shimmer-tag text-moss-text-secondary text-sm font-mono tracking-wide whitespace-nowrap px-3 py-1 rounded-full border border-moss-border'
-                    subtle
-                />
-            </section>
+
+                {/* Skills Strip */}
+                <div className='relative border-t border-b border-moss-border-subtle bg-moss-surface py-5 overflow-hidden'>
+                    <div className='ticker-track'>
+                        {[...skills, ...skills].map(({ label, icon: Icon }, i) => (
+                            <div key={`${label}-${i}`} className='flex items-center gap-2 text-moss-text-primary shrink-0 px-5'>
+                                <Icon size={20} />
+                                <span className='text-sm font-mono tracking-wide'>{label}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
