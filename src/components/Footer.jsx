@@ -25,7 +25,7 @@ const Footer = () => {
                         <FaGithub size={20} />
                     </a>
                     <a
-                        href='https://www.linkedin.com/in/michael-kaffel-0797173a2/'
+                        href='https://www.linkedin.com/in/michaelkaffel/'
                         target='_blank'
                         rel='noopener noreferrer'
                         className='text-moss-text-secondary hover:text-moss-green transition-colors duration-200'

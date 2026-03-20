@@ -142,7 +142,7 @@ const Contact = () => {
                             </p>
                             <ul className='flex flex-col gap-4'>
                                 {[
-                                    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/michael-kaffel-0797173a2/', display: 'linkedin.com/in/michaelkaffel' },
+                                    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/michaelkaffel/', display: 'linkedin.com/in/michaelkaffel' },
                                     { label: 'GitHub', href: 'https://github.com/michaelkaffel', display: 'github.com/michaelkaffel' },
                                     { label: 'Email', href: 'mailto:michaeldkaffel@gmail.com', display: 'michaeldkaffel@gmail.com' },
                                 ].map(({ label, href, display }) => (
