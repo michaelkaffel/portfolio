@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import ShimmerTags from '../components/ShimmerTags';
 import wwtScreenshot from '../assets/images/wwt-screenshot.jpg';
+import wwtScreenshot2 from '../assets/images/wwt-screenshot-maps.png';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 
 
@@ -25,7 +26,7 @@ const Projects = () => {
                     </p>
                     <div className='bg-moss-surface border border-moss-border rounded-2xl overflow-hidden'>
                         <img
-                            src={wwtScreenshot}
+                            src={wwtScreenshot2}
                             alt='Where Was That app screenshot'
                             className='w-full object-cover max-h-80'
                         />
