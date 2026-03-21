@@ -67,7 +67,7 @@ const Projects = () => {
                             {/* Buttons */}
                             <div className='flex flex-wrap gap-4 pt-2'>
                                 <a
-                                    href='https://where-was-that-place.web.app'
+                                    href='https://where-was-that.com'
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     className='bg-moss-amber hover:bg-moss-amber-bright text-moss-deep font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200 text-sm'
