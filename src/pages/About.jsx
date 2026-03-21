@@ -1,4 +1,4 @@
-import headshot from '../assets/images/aboutme-headshot.jpg';
+import headshot from '../assets/images/headshot.jpg';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const skills = {
