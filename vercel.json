@@ -1,5 +1,10 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "michaelkaffel.vercel.app" }],
+      "destination": "https://michaelkaffel.com/$1",
+      "permanent": true
+    }
   ]
 }
