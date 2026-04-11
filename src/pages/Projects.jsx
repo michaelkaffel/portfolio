@@ -142,7 +142,7 @@ const Projects = () => {
 
                             <div className='flex flex-wrap gap-3 pt-1'>
                                 <a
-                                    href='https://ocm-website-three.vercel.app/'
+                                    href='https://owlchrysalismedicine.com/'
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     className='bg-moss-amber hover:bg-moss-amber-bright text-moss-deep font-semibold px-4 py-2 rounded-lg transition-colors duration-200 text-sm'
