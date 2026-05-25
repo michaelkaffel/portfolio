@@ -34,9 +34,9 @@ const About = () => {
                     <div className='flex flex-col gap-4'>
                         <h1 className='text-4xl font-bold text-moss-text-primary'>About Me</h1>
                         <p className='text-moss-text-primary text-lg leading-relaxed'>
-                            I'm a full-stack developer and QA engineer with over six years of
-                            real-world testing experience. At Nutritious Movement, I was part of
-                            the web team responsible for QA — running pre- and post-release test
+                            I'm a <a href="downbyriverdev.com" target='_blank' rel='noreferrer' className='underline'>freelance</a> full-stack developer and QA engineer. I bring over six years of
+                            real-world testing experience while being part of
+                            a web team responsible for QA — running pre- and post-release test
                             cycles, documenting bugs with full repro steps, validating across
                             browsers, and verifying regression fixes on a production site with a
                             global audience.
@@ -45,7 +45,7 @@ const About = () => {
                             A bootcamp accelerated my path into full-stack development, but
                             quality has always been central to how I work. I now combine
                             hands-on development with the testing discipline I built in a
-                            professional QA role.
+                            professional QA and website management role.
                         </p>
                     </div>
                 </section>
