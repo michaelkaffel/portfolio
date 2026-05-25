@@ -34,7 +34,7 @@ const About = () => {
                     <div className='flex flex-col gap-4'>
                         <h1 className='text-4xl font-bold text-moss-text-primary'>About Me</h1>
                         <p className='text-moss-text-primary text-lg leading-relaxed'>
-                            I'm a <a href="downbyriverdev.com" target='_blank' rel='noreferrer' className='underline'>freelance</a> full-stack developer and QA engineer. I bring over six years of
+                            I'm a <a href="https://downbyriverdev.com/" target='_blank' rel='noreferrer' className='underline hover:text-moss-green transition-colors duration-200'>freelance</a> full-stack developer and QA engineer. I bring over six years of
                             real-world testing experience while being part of
                             a web team responsible for QA — running pre- and post-release test
                             cycles, documenting bugs with full repro steps, validating across

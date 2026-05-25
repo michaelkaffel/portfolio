@@ -145,7 +145,7 @@ const Contact = () => {
                                     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/michaelkaffel/', display: 'linkedin.com/in/michaelkaffel' },
                                     { label: 'GitHub', href: 'https://github.com/michaelkaffel', display: 'github.com/michaelkaffel' },
                                     { label: 'Email', href: 'mailto:michaeldkaffel@gmail.com', display: 'michaeldkaffel@gmail.com' },
-                                    { label: 'Freelance', href: 'downbyruverdev.com', display: 'downbyriverdev.com' },
+                                    { label: 'Freelance', href: 'https://downbyriverdev.com/', display: 'downbyriverdev.com' },
                                 ].map(({ label, href, display }) => (
                                     <li key={label} className='flex flex-col gap-1'>
                                         <span className='text-moss-green font-mono text-xs uppercase tracking-widest'>

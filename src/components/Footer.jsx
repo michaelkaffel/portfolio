@@ -14,7 +14,7 @@ const Footer = () => {
                 </div>
 
                 <a href="https://downbyriverdev.com" target="_blank" rel="noopener">
-                    Freelance @ downbyriverdev.com
+                    <p  className='text-moss-text-muted text-sm font-mono hover:text-moss-green transition-colors duration-200'>Freelance @ downbyriverdev.com</p>
                 </a>
 
 
