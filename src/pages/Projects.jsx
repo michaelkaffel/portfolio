@@ -7,6 +7,7 @@ import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const stack = ['React', 'Node.js', 'Express', 'MongoDB', 'Playwright', 'Google Cloud']
 const ocmStack = ['React', 'Vite', 'React Router', 'Tailwind CSS', 'Vercel Edge Functions', 'EmailJS']
+const rbStack = ['Next.js', 'Stripe','Supabase', 'Cloudflare R2', 'Resend', 'Netlify']
 
 const Projects = () => {
     useDocumentTitle('Projects');
@@ -160,17 +161,67 @@ const Projects = () => {
                             </div>
                         </div>
 
-                        {/* Placeholder */}
-                        <div className='bg-moss-surface border border-moss-border border-dashed rounded-2xl p-8 flex flex-col gap-3 justify-center items-start'>
-                            <span className='text-moss-text-muted font-mono text-xs uppercase tracking-widest'>
-                                Coming Soon
-                            </span>
-                            <h3 className='text-moss-text-secondary font-semibold'>
-                                Freelance / Volunteer Project
-                            </h3>
-                            <p className='text-moss-text-muted text-sm'>
-                                Next project in progress.
-                            </p>
+                        {/* Rethinking Broken */}
+                        <div className='bg-moss-surface border border-moss-border rounded-2xl p-8 flex flex-col justify-between gap-4'>
+                            <div className='flex flex-col gap-1'>
+                                <p className='text-moss-amber font-mono text-xs uppercase tracking-widest'>
+                                    Client Project
+                                </p>
+                                <h3 className='text-xl font-bold text-moss-text-primary'>
+                                    Rethinking Broken
+                                </h3>
+                                <p className='text-moss-text-secondary text-sm leading-relaxed'>
+                                    Full e-commerce site for an author selling a book in four formats
+                                    — paperback, hardcover, ebook, and audiobook. Stripe Checkout
+                                    handles payments; digital buyers receive a time-limited download
+                                    link via email. Includes an admin panel for order management and
+                                    download resends, newsletter signup, and full Next.js App Router
+                                    SEO metadata.
+                                </p>
+                                <div className='flex flex-col gap-2'>
+                                <h4 className='text-moss-green font-semibold text-xs uppercase tracking-widest font-mono mt-3'>
+                                    Key Challenges Solved
+                                </h4>
+                                <ul className='flex flex-col gap-1.5'>
+                                    {[
+                                        'Routed an 827 MB audiobook through Cloudflare R2 presigned URLs — Netlify serverless functions can\'t proxy large files, so the API validates the download token and issues a 302 redirect to R2, which serves the file at CDN speed without touching Netlify.',
+                                        'Resolved a Stripe webhook / page-load race condition on the thank-you page using polling — the page repeatedly calls /api/order until the webhook has written the order to Supabase, then renders the order summary and download button.',
+                                        'Enabled per-route OG metadata on a Next.js client component by splitting /shop/book into a server wrapper that exports metadata and a client BookContent.tsx that handles the paperback/hardcover toggle.',
+                                    ].map((item) => (
+                                        <li key={item} className='text-moss-text-primary text-sm flex items-start gap-2'>
+                                            <span className='text-moss-green mt-1 flex-shrink-0'>▸</span>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            </div>
+
+                            
+
+                            
+
+                            <div className='flex flex-wrap gap-3 pt-1'>
+                                <div className='mb-3'>
+                                <ShimmerTags items={rbStack}/>
+                                </div>
+                                <a
+                                    href='https://rethinkingbroken.com'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                    className='bg-moss-amber hover:bg-moss-amber-bright text-moss-deep font-semibold px-4 py-2 rounded-lg transition-colors duration-200 text-sm'
+                                >
+                                    Live Site →
+                                </a>
+                                <a
+                                    href='https://github.com/michaelkaffel/rethinking-broken'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                    className='border border-moss-green hover:border-moss-green-bright text-moss-green hover:text-moss-green-bright font-semibold px-5 py-2 rounded-lg transition-colors duration-200 text-sm'
+                                >
+                                    GitHub →
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
