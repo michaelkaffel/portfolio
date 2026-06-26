@@ -7,12 +7,12 @@ const skills = {
         'Regression Testing', 'Cross-browser Testing', 'Postman',
     ],
     'Frontend': [
-        'React', 'JavaScript', 'HTML & CSS', 'Tailwind CSS',
-        'Redux Toolkit', 'Vite'
+        'React', 'Next.js', 'JavaScript', 'TypeScript', 'HTML & CSS', 'Tailwind CSS',
+        'Redux Toolkit'
     ],
     'Backend & Tools': [
-        'Node.js', 'Express', 'MongoDB', 'Mongoose',
-        'Git', 'REST APIs'
+        'Node.js', 'Express', 'MongoDB',
+        'SQL', 'Stripe', 'Ruby', 'REST APIs'
     ]
 };
 

@@ -3,23 +3,29 @@ import useDocumentTitle from '../hooks/useDocumentTitle';
 import heroBg from '../assets/images/hero-bg.jpg';
 import {
     SiReact, SiNodedotjs, SiExpress, SiMongodb,
-    SiJavascript, SiGit, SiTailwindcss,
-    SiHtml5,
+    SiJavascript, SiTypescript, SiGit, SiTailwindcss,
+    SiHtml5, SiStripe, SiSupabase, SiPostgresql, SiRuby, SiNextdotjs,
 } from 'react-icons/si'
 import { VscBeaker } from 'react-icons/vsc';
 import { FaCss3Alt } from 'react-icons/fa';
 
 const skills = [
     { label: 'React', icon: SiReact },
+    { label: 'Next.js', icon: SiNextdotjs },
     { label: 'Node.js', icon: SiNodedotjs },
     { label: 'Express', icon: SiExpress },
     { label: 'MongoDB', icon: SiMongodb },
     { label: 'JavaScript', icon: SiJavascript },
+    { label: 'TypeScript', icon: SiTypescript },
     { label: 'Playwright', icon: VscBeaker },
     { label: 'Git', icon: SiGit },
     { label: 'Tailwind CSS', icon: SiTailwindcss },
     { label: 'HTML', icon: SiHtml5 },
     { label: 'CSS', icon: FaCss3Alt },
+    { label: 'Stripe', icon: SiStripe },
+    { label: 'Supabase', icon: SiSupabase },
+    { label: 'SQL', icon: SiPostgresql },
+    { label: 'Ruby', icon: SiRuby },
 ];
 
 const Home = () => {
@@ -61,9 +67,17 @@ const Home = () => {
                             href='/resume.pdf'
                             target='_blank'
                             rel='noopener noreferrer'
-                            className='border border-moss-green hover:border-moss-green-bright text-moss-green hover:text-moss-green-bright font-semibold px-6 py-3 rounded-lg transition-colors duration-200'
+                            className='border border-moss-text-primary hover:border-moss-green-bright text-moss-text-primary hover:text-moss-green-bright font-semibold px-6 py-3 rounded-lg transition-colors duration-200'
                         >
                             Download Resume →
+                        </a>
+                        <a
+                            href='https://downbyriverdev.com'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='border border-moss-text-primary hover:border-moss-green-bright text-moss-text-primary hover:text-moss-green-bright font-semibold px-6 py-3 rounded-lg transition-colors duration-200'
+                        >
+                            Hire me →
                         </a>
                     </div>
                 </div>
