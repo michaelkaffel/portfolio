@@ -8,6 +8,7 @@ import useDocumentTitle from '../hooks/useDocumentTitle';
 const stack = ['React', 'Node.js', 'Express', 'MongoDB', 'Playwright', 'Google Cloud']
 const ocmStack = ['React', 'Vite', 'React Router', 'Tailwind CSS', 'Vercel Edge Functions', 'EmailJS']
 const rbStack = ['Next.js', 'Stripe','Supabase', 'Cloudflare R2', 'Resend', 'Netlify']
+const pinkPonyStack = ['Next.js', 'TypeScript', 'CSS Modules', 'Cloudflare Pages', 'GitHub Actions', 'Wrangler', 'Google Analytics 4', 'GitHub Contents API']
 
 const Projects = () => {
     useDocumentTitle('Projects');
@@ -161,6 +162,61 @@ const Projects = () => {
                             </div>
                         </div>
 
+                        
+
+                        {/* Pink Pony Cafe */}
+                        <div className='bg-moss-surface border border-moss-border rounded-2xl p-8 flex flex-col gap-4'>
+                            <div className='flex flex-col gap-1'>
+                                <p className='text-moss-amber font-mono text-xs uppercase tracking-widest'>
+                                    Client Project
+                                </p>
+                                <h3 className='text-xl font-bold text-moss-text-primary'>
+                                    Pink Pony Cafe
+                                </h3>
+                                <p className='text-moss-text-secondary text-sm leading-relaxed'>
+                                    A three-page static marketing site built for Pink Pony Cafe with
+                                    landing page, menu, and contact/directions pages. The menu is delivered
+                                    as a downloadable PDF with a lightweight, password-protected backend so
+                                    the client can upload a new menu directly, without needing developer
+                                    involvement for routine updates. The site runs on Next.js with a fully
+                                    static export, deployed to Cloudflare Pages via GitHub Actions, and
+                                    includes consent-gated Google Analytics to respect visitor privacy.
+                                </p>
+                            </div>
+
+                            <div className='flex flex-col gap-2'>
+                                <h4 className='text-moss-green font-semibold text-xs uppercase tracking-widest font-mono'>
+                                    Key Challenges Solved
+                                </h4>
+                                <ul className='flex flex-col gap-1.5'>
+                                    {[
+                                        'Square menu embed was a platform dead end. Confirmed via direct testing that Square doesn\'t support embedding just the menu/ordering widget externally, so I pivoted to a PDF menu with a password-protected upload UI that commits via the GitHub Contents API, triggering the existing Actions pipeline to rebuild.',
+                                        'Stacking-context regression from a speculative position: relative. A new stacking context on one section caused it to paint over an unrelated component\'s background graphic; resolved by removing the speculative positioning and introducing an explicit z-index scale.',
+                                        'Privacy-conscious analytics across environments. Built a consent-gated GA4 component with environment-scoped Measurement IDs, keeping a staging property under my own account fully separate from the client\'s production property, and verified it doesn\'t fire until explicit consent.',
+                                    ].map((item) => (
+                                        <li key={item} className='text-moss-text-primary text-sm flex items-start gap-2'>
+                                            <span className='text-moss-green mt-1 flex-shrink-0'>▸</span>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <ShimmerTags items={pinkPonyStack} />
+
+                            <div className='flex flex-wrap gap-3 pt-1'>
+                                <a
+                                    href='https://pinkponycafe.com'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                    className='bg-moss-amber hover:bg-moss-amber-bright text-moss-deep font-semibold px-4 py-2 rounded-lg transition-colors duration-200 text-sm'
+                                >
+                                    Live Site →
+                                </a>
+                            </div>
+                        </div>
+
+
                         {/* Rethinking Broken */}
                         <div className='bg-moss-surface border border-moss-border rounded-2xl p-8 flex flex-col justify-between gap-4'>
                             <div className='flex flex-col gap-1'>
@@ -222,6 +278,17 @@ const Projects = () => {
                                     GitHub →
                                 </a>
                             </div>
+                        </div>
+
+
+                        {/* Placeholder — new project coming soon */}
+                        <div className='border border-dashed border-moss-border rounded-2xl p-8 flex flex-col items-center justify-center text-center gap-2 min-h-[200px]'>
+                            <p className='text-moss-text-secondary text-sm font-mono uppercase tracking-widest'>
+                                New Project
+                            </p>
+                            <p className='text-moss-text-secondary text-sm'>
+                                Coming soon
+                            </p>
                         </div>
                     </div>
                 </section>

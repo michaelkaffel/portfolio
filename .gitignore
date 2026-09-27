@@ -27,3 +27,4 @@ dist-ssr
 
 # macOS caches and directories
 **/.DS_Store
+CLAUDE.md
