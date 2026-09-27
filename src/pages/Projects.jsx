@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
 import ShimmerTags from '../components/ShimmerTags';
-import wwtScreenshot from '../assets/images/wwt-screenshot.jpg';
-import wwtScreenshot2 from '../assets/images/wwt-screenshot-maps.png';
+import wwtScreenshot from '../assets/images/wwt-screenshot-maps.webp';
+import ocmScreenshot from '../assets/images/ocm-home.webp';
+import pinkPonyScreenshot from '../assets/images/pink-pony-home.webp';
+import rbScreenshot from '../assets/images/rb-home.webp';
 import useDocumentTitle from '../hooks/useDocumentTitle';
+import Bullet from '../components/Bullet';
 
 
 const stack = ['React', 'Node.js', 'Express', 'MongoDB', 'Playwright', 'Google Cloud']
@@ -29,7 +32,7 @@ const Projects = () => {
                     </p>
                     <div className='bg-moss-surface border border-moss-border rounded-2xl overflow-hidden'>
                         <img
-                            src={wwtScreenshot2}
+                            src={wwtScreenshot}
                             alt='Where Was That app screenshot'
                             className='w-full object-cover max-h-80'
                         />
@@ -57,7 +60,7 @@ const Projects = () => {
                                         'Built a full Playwright E2E test suite covering auth flows, CRUD operations, and edge cases across the complete user journey.',
                                     ].map((item) => (
                                         <li key={item} className='text-moss-text-primary text-sm flex items-start gap-2'>
-                                            <span className='text-moss-green mt-1 flex-shrink-0'>▸</span>
+                                            <Bullet />
                                             {item}
                                         </li>
                                     ))}
@@ -112,6 +115,19 @@ const Projects = () => {
                                 <h3 className='text-xl font-bold text-moss-text-primary'>
                                     Owl Chrysalis Medicine
                                 </h3>
+                                <a
+                                    href='https://owlchrysalismedicine.com/'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                    className='group block my-2'
+                                >
+                                    <img
+                                        src={ocmScreenshot}
+                                        alt='Owl Chrysalis Medicine homepage screenshot (opens live site)'
+                                        loading='lazy'
+                                        className='w-full aspect-[16/10] object-cover object-top rounded-lg border border-moss-border group-hover:border-moss-green transition-colors duration-200'
+                                    />
+                                </a>
                                 <p className='text-moss-text-secondary text-sm leading-relaxed'>
                                     Migrated a health coaching and podcast site from Wix to a custom
                                     React application with full SEO continuity — 301 redirects for all
@@ -133,7 +149,7 @@ const Projects = () => {
                                         'Integrated the Buzzsprout RSS feed via Vercel Edge Functions with CDN-level caching; episode detail pages include an embedded player and lazy-loaded tabbed Show Notes, Chapters, and Transcript.',
                                     ].map((item) => (
                                         <li key={item} className='text-moss-text-primary text-sm flex items-start gap-2'>
-                                            <span className='text-moss-green mt-1 flex-shrink-0'>▸</span>
+                                            <Bullet />
                                             {item}
                                         </li>
                                     ))}
@@ -173,6 +189,19 @@ const Projects = () => {
                                 <h3 className='text-xl font-bold text-moss-text-primary'>
                                     Pink Pony Cafe
                                 </h3>
+                                <a
+                                    href='https://pinkponycafe.com'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                    className='group block my-2'
+                                >
+                                    <img
+                                        src={pinkPonyScreenshot}
+                                        alt='Pink Pony Cafe homepage screenshot (opens live site)'
+                                        loading='lazy'
+                                        className='w-full aspect-[16/10] object-cover object-top rounded-lg border border-moss-border group-hover:border-moss-green transition-colors duration-200'
+                                    />
+                                </a>
                                 <p className='text-moss-text-secondary text-sm leading-relaxed'>
                                     A three-page static marketing site built for Pink Pony Cafe with
                                     landing page, menu, and contact/directions pages. The menu is delivered
@@ -195,7 +224,7 @@ const Projects = () => {
                                         'Privacy-conscious analytics across environments. Built a consent-gated GA4 component with environment-scoped Measurement IDs, keeping a staging property under my own account fully separate from the client\'s production property, and verified it doesn\'t fire until explicit consent.',
                                     ].map((item) => (
                                         <li key={item} className='text-moss-text-primary text-sm flex items-start gap-2'>
-                                            <span className='text-moss-green mt-1 flex-shrink-0'>▸</span>
+                                            <Bullet />
                                             {item}
                                         </li>
                                     ))}
@@ -218,7 +247,7 @@ const Projects = () => {
 
 
                         {/* Rethinking Broken */}
-                        <div className='bg-moss-surface border border-moss-border rounded-2xl p-8 flex flex-col justify-between gap-4'>
+                        <div className='bg-moss-surface border border-moss-border rounded-2xl p-8 flex flex-col gap-4'>
                             <div className='flex flex-col gap-1'>
                                 <p className='text-moss-amber font-mono text-xs uppercase tracking-widest'>
                                     Client Project
@@ -226,6 +255,19 @@ const Projects = () => {
                                 <h3 className='text-xl font-bold text-moss-text-primary'>
                                     Rethinking Broken
                                 </h3>
+                                <a
+                                    href='https://rethinkingbroken.com'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                    className='group block my-2'
+                                >
+                                    <img
+                                        src={rbScreenshot}
+                                        alt='Rethinking Broken homepage screenshot (opens live site)'
+                                        loading='lazy'
+                                        className='w-full aspect-[16/10] object-cover object-top rounded-lg border border-moss-border group-hover:border-moss-green transition-colors duration-200'
+                                    />
+                                </a>
                                 <p className='text-moss-text-secondary text-sm leading-relaxed'>
                                     Full e-commerce site for an author selling a book in four formats
                                     — paperback, hardcover, ebook, and audiobook. Stripe Checkout
@@ -234,8 +276,10 @@ const Projects = () => {
                                     download resends, newsletter signup, and full Next.js App Router
                                     SEO metadata.
                                 </p>
-                                <div className='flex flex-col gap-2'>
-                                <h4 className='text-moss-green font-semibold text-xs uppercase tracking-widest font-mono mt-3'>
+                            </div>
+
+                            <div className='flex flex-col gap-2'>
+                                <h4 className='text-moss-green font-semibold text-xs uppercase tracking-widest font-mono'>
                                     Key Challenges Solved
                                 </h4>
                                 <ul className='flex flex-col gap-1.5'>
@@ -245,22 +289,16 @@ const Projects = () => {
                                         'Enabled per-route OG metadata on a Next.js client component by splitting /shop/book into a server wrapper that exports metadata and a client BookContent.tsx that handles the paperback/hardcover toggle.',
                                     ].map((item) => (
                                         <li key={item} className='text-moss-text-primary text-sm flex items-start gap-2'>
-                                            <span className='text-moss-green mt-1 flex-shrink-0'>▸</span>
+                                            <Bullet />
                                             {item}
                                         </li>
                                     ))}
                                 </ul>
                             </div>
-                            </div>
 
-                            
-
-                            
+                            <ShimmerTags items={rbStack} />
 
                             <div className='flex flex-wrap gap-3 pt-1'>
-                                <div className='mb-3'>
-                                <ShimmerTags items={rbStack}/>
-                                </div>
                                 <a
                                     href='https://rethinkingbroken.com'
                                     target='_blank'
