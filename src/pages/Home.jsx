@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import useDocumentTitle from '../hooks/useDocumentTitle';
-import heroBg from '../assets/images/hero-bg.jpg';
+import heroBg from '../assets/images/hero-bg.webp';
 import {
     SiReact, SiNodedotjs, SiExpress, SiMongodb,
     SiJavascript, SiTypescript, SiGit, SiTailwindcss,

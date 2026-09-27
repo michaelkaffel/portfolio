@@ -1,6 +1,7 @@
 import ShimmerTags from '../components/ShimmerTags';
 import e2eDemo from '../assets/videos/e2e-test-demo.mp4'
 import useDocumentTitle from '../hooks/useDocumentTitle';
+import Bullet from '../components/Bullet';
 
 const tools = [
     'Playwright', 'Manual Testing', 'Bug Reporting',
@@ -67,7 +68,7 @@ const QATesting = () => {
                                     'Edge cases: duplicate registration, invalid login',
                                 ].map((item) => (
                                     <li key={item} className='text-moss-text-primary text-sm flex items-start gap-2'>
-                                        <span className='text-moss-green mt-1 flex-shrink-0'>▸</span>
+                                        <Bullet />
                                         {item}
                                     </li>
                                 ))}
@@ -130,7 +131,7 @@ const QATesting = () => {
                                 'Coordinated testing during full platform migration',
                             ].map((item) => (
                                 <li key={item} className='text-moss-text-primary text-sm flex items-start gap-2'>
-                                    <span className='text-moss-green mt-1 flex-shrink-0'>▸</span>
+                                    <Bullet />
                                     {item}
                                 </li>
                             ))}

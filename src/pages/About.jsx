@@ -1,5 +1,6 @@
-import headshot from '../assets/images/headshot.jpg';
+import headshot from '../assets/images/headshot.webp';
 import useDocumentTitle from '../hooks/useDocumentTitle';
+import Bullet from '../components/Bullet';
 
 const skills = {
     'QA & Testing': [
@@ -103,7 +104,7 @@ const About = () => {
                                 <ul className='flex flex-col gap-2'>
                                     {items.map((skill) => (
                                         <li key={skill} className='text-moss-text-primary text-sm flex items-center gap-2'>
-                                            <span className='text-moss-green'>▸</span>
+                                            <Bullet />
                                             {skill}
                                         </li>
                                     ))}
