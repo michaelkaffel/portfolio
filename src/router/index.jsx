@@ -5,6 +5,7 @@ import About from '../pages/About';
 import Projects from '../pages/Projects';
 import QATesting from '../pages/QATesting';
 import Contact from '../pages/Contact';
+import NotFound from '../pages/NotFound';
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
             { path: 'projects', element: <Projects />},
             { path: 'qa-testing', element: <QATesting />},
             { path: 'contact', element: <Contact />},
+            { path: '*', element: <NotFound />},
         ],
     },
 ]);
